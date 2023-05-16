@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monda&display=swap" rel="stylesheet">
+
+    <title>Dynamic Website</title>
+
+    <style>
+        body {
+            background-color: black;
+            overflow: hidden;
+
+        }
+
+        #container {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        #logo {
+            width: 500px;
+            position: absolute;
+            left: -500px;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            /* filter: grayscale(100%); */
+            border-radius: 5%;
+
+            animation: pulsate 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulsate {
+            0% {
+                box-shadow: 0 0 5px 5px white;
+            }
+
+            100% {
+                box-shadow: 0 0 40px 10px white;
+            }
+        }
+
+        #title {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 44px;
+            font-family: Arial, sans-serif;
+            opacity: 0;
+            transition: all 2s cubic-bezier(0.25, 0.1, 0.25, 1);
+            white-space: nowrap;
+            text-shadow: -6px 12px 11px #c4c4c4;
+        }
+
+        #credits {
+            width: 296px;
+
+            text-align: center;
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 23px;
+            font-family: Arial, sans-serif;
+            opacity: 0;
+            transition: opacity 3s linear;
+            /* text-shadow: -6px 12px 11px #A3A3A3; */
+        }
+
+        #company {
+            font-family: 'Monda', sans-serif;
+            font-size: 65px;
+            color: white;
+            position: absolute;
+            
+            left: 50%;
+            top: 35%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            /* Initial opacity set to 0 */
+            animation: slideDown 4s ease-in-out 18s forwards;
+        }
+
+        @keyframes slideDown {
+            0% {
+                top: -100px;
+                /* Start off the screen */
+                opacity: 0;
+                /* Start with opacity 0 */
+            }
+
+            100% {
+                top: 31%;
+                /* Center of the screen */
+                transform: translate(-50%, -50%);
+                opacity: 1;
+                /* End with opacity 1 */
+            }
+        }
+
+
+
+        #logotwo {
+            position: absolute;
+            width: 192px;
+            border-radius: 12px;
+            left: 50%;
+            top: 100%;
+            /* Start off the screen */
+            transform: translate(-50%, -50%);
+            animation: slideUp 4s ease-in-out 18s forwards;
+            opacity: 0;
+            /* Initial opacity set to 0 */
+        }
+
+        @keyframes slideUp {
+            0% {
+                top: 100%;
+                /* Start off the screen */
+                opacity: 0;
+                /* Start with opacity 0 */
+            }
+
+            100% {
+                top: 50%;
+                /* Center of the screen */
+                opacity: 1;
+                /* End with opacity 1 */
+            }
+        }
+
+
+
+
+        .light {
+            width: 1px;
+
+            border-radius: 50%;
+            background-color: rgb(255, 255, 255);
+            position: absolute;
+            left: 78%;
+            box-shadow: 0 0 287px 50px white;
+            opacity: 0;
+        }
+
+
+        .light.on {
+            background-color: rgb(255, 255, 255);
+        }
+
+        .light_one {
+            top: 17%;
+            left: 87%;
+        }
+
+        .light_two {
+            top: 77%;
+            left: 78%;
+        }
+
+        .light_three {
+            top: 30%;
+            left: 11%;
+        }
+
+        .light_four {
+            top: 12%;
+            left: 44%;
+        }
+
+        .light_five {
+            top: 71%;
+            left: 29%;
+        }
+
+        .light_six {
+            top: 57%;
+            left: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <img id="logo" src="img/logo.png" alt="Logo">
+        <div id="title">Currently Conducting Private Introductions</div>
+        <div id="company">Mutua</div>
+        <img src="img/logo.png" alt="logo" id="logotwo">
+
+        <div class="light light_one"></div>
+        <div class="light light_two"></div>
+        <div class="light light_three"></div>
+        <div class="light light_four"></div>
+        <div class="light light_five"></div>
+        <div class="light light_six"></div>
+
+    </div>
+
+
+    <div id="credits">For further information, please contact us at <b>info@mutua.tv</b></div>
+
+    <script>
+        window.addEventListener('load', function () {
+            let logo = document.getElementById('logo');
+            let title = document.getElementById('title');
+            let credits = document.getElementById('credits');
+
+            setTimeout(function () {
+                logo.style.left = '50%';
+                logo.style.transition = 'all 7s cubic-bezier(0.68, -0.55, 0.265, 1)';
+
+                setTimeout(function () {
+                    logo.style.transition = 'opacity 7s ease';
+                    title.style.transition = 'opacity 7s ease';
+
+                    logo.style.opacity = '0';
+                    title.style.opacity = '1';
+
+                    setTimeout(function () {
+                        logo.style.display = 'none';
+                        title.style.left = '210%';
+                        title.style.transition =
+                            'all 6s cubic-bezier(0.25, 0.1, 0.25, 0)';
+
+                        setTimeout(function () {
+                            title.style.opacity = '0';
+                            title.style.display = 'none';
+                            credits.style.opacity = '1';
+                        }, 8000);
+                    }, 6000);
+                }, 8000);
+            }, 300);
+
+
+            // flashes-------------------------
+
+            function getRandomNumber(min, max) {
+                return Math.random() * (max - min) + min;
+            }
+
+            function flashLights() {
+                const lights = document.querySelectorAll(".light");
+
+                lights.forEach((light) => {
+                    const randomDelay = getRandomNumber(4000, 8000);
+                    const randomDuration = getRandomNumber(4000, 6000);
+
+                    setTimeout(() => {
+                        setInterval(() => {
+                            const randomOpacity = getRandomNumber(0, 1);
+                            light.style.opacity = randomOpacity;
+                        }, 200);
+                    }, randomDelay);
+
+                    setTimeout(() => {
+                        clearInterval(interval);
+                        light.style.opacity = 0;
+                    }, randomDelay + randomDuration);
+                });
+            }
+
+            setTimeout(flashLights, 20000);
+
+
+
+
+
+
+
+        });
+    </script>
+</body>
+
+</html>
