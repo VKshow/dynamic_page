@@ -9,6 +9,10 @@
     <title>Dynamic Website</title>
 
     <style>
+        *{
+            outline: none;
+            text-decoration: none;
+        }
         body {
             background-color: black;
             overflow: hidden;
@@ -62,7 +66,7 @@
         }
 
         #credits {
-            width: 296px;
+            width: 348px;
 
             text-align: center;
             position: fixed;
@@ -70,7 +74,8 @@
             left: 50%;
             transform: translateX(-50%);
             color: white;
-            font-size: 23px;
+            font-size: 33px;
+            font-weight: 200;
             font-family: Arial, sans-serif;
             opacity: 0;
             transition: opacity 3s linear;
@@ -80,6 +85,7 @@
         #company {
             font-family: 'Monda', sans-serif;
             font-size: 65px;
+            font-weight: 800;
             color: white;
             position: absolute;
             
@@ -88,7 +94,45 @@
             transform: translate(-50%, -50%);
             opacity: 0;
             /* Initial opacity set to 0 */
+            animation: slideUp 4s ease-in-out 18s forwards;
+        }
+
+       
+        
+        @keyframes slideUp {
+            0% {
+                top: 100%;
+                /* Start off the screen */
+                opacity: 0;
+                /* Start with opacity 0 */
+            }
+            99%{
+                color: black;
+                z-index: 2;
+            }
+
+            100% {
+                top: 69%;
+                /* Center of the screen */
+                opacity: 1;
+                /* End with opacity 1 */
+                color: black;
+                z-index: 2;
+            }
+        }
+
+
+        #logotwo {
+            position: absolute;
+            width: 500px;
+            border-radius: 12px;
+            left: 50%;
+            top: 100%;
+            /* Start off the screen */
+            transform: translate(-50%, -50%);
             animation: slideDown 4s ease-in-out 18s forwards;
+            opacity: 0;
+            /* Initial opacity set to 0 */
         }
 
         @keyframes slideDown {
@@ -100,45 +144,13 @@
             }
 
             100% {
-                top: 31%;
+                top: 40%;
                 /* Center of the screen */
                 transform: translate(-50%, -50%);
                 opacity: 1;
                 /* End with opacity 1 */
             }
         }
-
-
-
-        #logotwo {
-            position: absolute;
-            width: 192px;
-            border-radius: 12px;
-            left: 50%;
-            top: 100%;
-            /* Start off the screen */
-            transform: translate(-50%, -50%);
-            animation: slideUp 4s ease-in-out 18s forwards;
-            opacity: 0;
-            /* Initial opacity set to 0 */
-        }
-
-        @keyframes slideUp {
-            0% {
-                top: 100%;
-                /* Start off the screen */
-                opacity: 0;
-                /* Start with opacity 0 */
-            }
-
-            100% {
-                top: 50%;
-                /* Center of the screen */
-                opacity: 1;
-                /* End with opacity 1 */
-            }
-        }
-
 
 
 
@@ -149,7 +161,7 @@
             background-color: rgb(255, 255, 255);
             position: absolute;
             left: 78%;
-            box-shadow: 0 0 287px 50px white;
+            box-shadow: 0 0 287px 51px white;
             opacity: 0;
         }
 
@@ -174,8 +186,8 @@
         }
 
         .light_four {
-            top: 12%;
-            left: 44%;
+            top: 87%;
+            left: -1%;
         }
 
         .light_five {
@@ -187,15 +199,21 @@
             top: 57%;
             left: 100%;
         }
+        a{
+            color: white;
+        }
+        a:hover{
+            color: rgb(151, 151, 151);
+        }
     </style>
 </head>
 
 <body>
     <div id="container">
-        <img id="logo" src="img/logo.png" alt="Logo">
+        <img id="logo" src="img/logo2.jpg" alt="Logo">
         <div id="title">Currently Conducting Private Introductions</div>
         <div id="company">Mutua</div>
-        <img src="img/logo.png" alt="logo" id="logotwo">
+        <img src="img/logo2.jpg" alt="logo" id="logotwo">
 
         <div class="light light_one"></div>
         <div class="light light_two"></div>
@@ -207,7 +225,7 @@
     </div>
 
 
-    <div id="credits">For further information, please contact us at <b>info@mutua.tv</b></div>
+    <div id="credits">For further information, please contact us at <a href="mailto:info@mutua.tv" class="mail"><b>info@mutua.tv</b></a></div>
 
     <script>
         window.addEventListener('load', function () {
