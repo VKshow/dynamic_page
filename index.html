@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,17 +27,18 @@
         #container {
             position: relative;
             height: 100vh;
-            width: 100%;
-            /* display: flex;
+            width: 100vw;
+            display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden; */
-            margin: 0 auto;
+            overflow: hidden;
+            /* margin: 0 auto; */
             overflow: hidden;
         }
 
         #logo {
-            width: 500px;
+            width: calc(100vw - 100px);
+            max-width: 500px;
             position: absolute;
             left: -500px;
             top: 50%;
@@ -65,7 +66,9 @@
             top: 50%;
             transform: translate(-50%, -50%);
             color: white;
-            font-size: 44px;
+            /* font-size: 44px; */
+            font-size: calc(44px + (100vw - 1200px) * 0.02);
+            max-font-size: 44px;
             font-family: Arial, sans-serif;
             opacity: 0;
             transition: all 2s cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -92,7 +95,9 @@
 
         #company {
             font-family: 'Monda', sans-serif;
-            font-size: 65px;
+            /* font-size: 65px; */
+            font-size: calc(65px + (1vw - 6px));
+            max-font-size: 65px;
             font-weight: 800;
             color: white;
             position: absolute;
@@ -121,7 +126,8 @@
             }
 
             100% {
-                top: 63%;
+                
+                top: 625px;
                 
                 opacity: 1;
                
@@ -133,7 +139,9 @@
 
         #logotwo {
             position: absolute;
-            width: 500px;
+            width: calc(100vw - 100px);
+            max-width: 500px;
+            /* width: 500px; */
             border-radius: 12px;
             left: 50%;
             top: 100%;
@@ -153,7 +161,8 @@
             }
 
             100% {
-                top: 40%;
+                
+                top: 420px;
                
                 transform: translate(-50%, -50%);
                 opacity: 1;
@@ -274,8 +283,9 @@
         } */
 
         /* height========= */
+        
 
-        @media(max-height: 842px) {
+        /* @media(max-height: 842px) {
             @keyframes slideUp {
                 0% {
                     top: 100%;
@@ -445,7 +455,7 @@
             #credits {
                 font-style: 15px;
             }
-        }
+        } */
 
 
 
@@ -461,12 +471,13 @@
         <div id="title">Currently Conducting Private Introductions</div>
         
         <img src="img/logo2.jpg" alt="logo" id="logotwo">
-        <div id="company">Mutua</div>
+    <div id="company">Mutua</div>
+        
 
 
 
     </div>
-
+    
 
     <div id="credits">For further information, please contact us at <a href="mailto:info@mutua.tv"
             class="mail"><b>info@mutua.tv</b></a></div>
