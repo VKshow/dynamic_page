@@ -1,0 +1,274 @@
+        /* media--------------- */
+
+
+        /* width-------------- */
+        @media(max-width: 853px) {
+            #title {
+                font-size: 38px;
+            }
+        }
+
+        @media(max-width: 736px) {
+            #title {
+                font-size: 30px;
+            }
+        }
+
+        @media(max-width: 585px) {
+            #title {
+                font-size: 24px;
+            }
+        }
+
+        @media(max-width: 535px) {
+
+            #logo,
+            #logotwo {
+                width: 311px;
+            }
+
+            #company {
+                font-size: 43px;
+            }
+
+            #credits {
+                font-size: 23px;
+            }
+
+            @keyframes slideUp {
+                0% {
+                    top: 100%;
+                    
+                    opacity: 0;
+                    
+                }
+
+                99% {
+                    color: black;
+                    z-index: 2;
+                }
+
+                100% {
+                    top: 58%;
+                    
+                    opacity: 1;
+                    
+                    color: black;
+                    z-index: 2;
+                }
+            }
+        }
+
+        @media(max-width: 456px) {
+            #title {
+                font-size: 20px;
+            }
+        }
+
+        @media(max-width: 349px) {
+            #title {
+                font-size: 16px;
+
+            }
+
+            @keyframes slideUp {
+                0% {
+                    top: 100%;
+                   
+                    opacity: 0;
+                
+                }
+
+                99% {
+                    color: black;
+                    z-index: 2;
+                }
+
+                100% {
+                    top: 69%;
+                    
+                    opacity: 1;
+                    
+                    color: black;
+                    z-index: 2;
+                }
+            }
+
+            #credits {
+                font-size: 14px;
+            }
+        }
+
+        /* height========= */
+
+        @media(max-height: 842px) {
+            @keyframes slideUp {
+                0% {
+                    top: 100%;
+                    
+                    opacity: 0;
+                    
+                }
+
+                99% {
+                    color: black;
+                    z-index: 2;
+                }
+
+                100% {
+                    top: 65%;
+                    
+                    opacity: 1;
+                   
+                    color: black;
+                    z-index: 2;
+                }
+            }
+        }
+
+        @media(max-height: 772px) {
+            @keyframes slideUp {
+                0% {
+                    top: 100%;
+                    
+                    opacity: 0;
+                   
+                }
+
+                99% {
+                    color: black;
+                    z-index: 2;
+                }
+
+                100% {
+                    top: 68%;
+                    
+                    opacity: 1;
+                    
+                    color: black;
+                    z-index: 2;
+                }
+            }
+        }
+
+        @media(max-height: 699px) {
+            @keyframes slideUp {
+                0% {
+                    top: 100%;
+                    
+                    opacity: 0;
+                    
+                }
+
+                99% {
+                    color: black;
+                    z-index: 2;
+                }
+
+                100% {
+                    top: 70%;
+                    
+                    opacity: 1;
+                    
+                    color: black;
+                    z-index: 2;
+                }
+            }
+
+            #credits {
+                font-size: 22px;
+            }
+        }
+
+        @media(max-height: 613px) {
+            @keyframes slideUp {
+                0% {
+                    top: 100%;
+                    
+                    opacity: 0;
+                    
+                }
+
+                99% {
+                    color: black;
+                    z-index: 2;
+                }
+
+                100% {
+                    top: 61%;
+                    
+                    opacity: 1;
+                    
+                    color: black;
+                    z-index: 2;
+                }
+            }
+
+            #logo,
+            #logotwo {
+                width: 311px;
+            }
+
+            #company {
+                font-size: 43px;
+            }
+
+        }
+
+        @media(max-height: 436px) {
+            @keyframes slideUp {
+                0% {
+                    top: 100%;
+                    
+                    opacity: 0;
+                    
+                }
+
+                99% {
+                    color: black;
+                    z-index: 2;
+                }
+
+                100% {
+                    top: 68%;
+                    
+                    opacity: 1;
+                    
+                    color: black;
+                    z-index: 2;
+                }
+            }
+
+            #credits {
+                font-style: 15px;
+            }
+        }
+
+        @media(max-height: 417px) {
+            @keyframes slideUp {
+                0% {
+                    top: 100%;
+                    
+                    opacity: 0;
+                    
+                }
+
+                99% {
+                    color: black;
+                    z-index: 2;
+                }
+
+                100% {
+                    top: 70%;
+                    
+                    opacity: 1;
+                   
+                    color: black;
+                    z-index: 2;
+                }
+            }
+
+            #credits {
+                font-style: 15px;
+            }
+        }
