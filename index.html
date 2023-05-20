@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,10 +13,11 @@
     <title>Dynamic Website</title>
 
     <style>
-        *{
+        * {
             outline: none;
             text-decoration: none;
         }
+
         body {
             background-color: black;
             overflow: hidden;
@@ -26,9 +27,12 @@
         #container {
             position: relative;
             height: 100vh;
-            display: flex;
+            width: 100%;
+            /* display: flex;
             justify-content: center;
             align-items: center;
+            overflow: hidden; */
+            margin: 0 auto;
             overflow: hidden;
         }
 
@@ -39,7 +43,7 @@
             top: 50%;
             transform: translate(-50%, -50%);
             transition: all 2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            /* filter: grayscale(100%); */
+
             border-radius: 5%;
 
             animation: pulsate 2s ease-in-out infinite alternate;
@@ -83,7 +87,7 @@
             font-family: Arial, sans-serif;
             opacity: 0;
             transition: opacity 3s linear;
-            /* text-shadow: -6px 12px 11px #A3A3A3; */
+
         }
 
         #company {
@@ -92,7 +96,7 @@
             font-weight: 800;
             color: white;
             position: absolute;
-            
+
             left: 50%;
             top: 35%;
             transform: translate(-50%, -50%);
@@ -101,8 +105,8 @@
             animation: slideUp 4s ease-in-out 18s forwards;
         }
 
-       
-        
+
+
         @keyframes slideUp {
             0% {
                 top: 100%;
@@ -110,13 +114,14 @@
                 opacity: 0;
                 /* Start with opacity 0 */
             }
-            99%{
+
+            99% {
                 color: black;
                 z-index: 2;
             }
 
             100% {
-                top: 69%;
+                top: 63%;
                 /* Center of the screen */
                 opacity: 1;
                 /* End with opacity 1 */
@@ -158,56 +163,286 @@
 
 
 
-        .light {
-            width: 1px;
 
-            border-radius: 50%;
-            background-color: rgb(255, 255, 255);
-            position: absolute;
-            left: 78%;
-            box-shadow: 0 0 287px 51px white;
-            opacity: 0;
-        }
-
-
-        .light.on {
-            background-color: rgb(255, 255, 255);
-        }
-
-        .light_one {
-            top: 17%;
-            left: 87%;
-        }
-
-        .light_two {
-            top: 77%;
-            left: 78%;
-        }
-
-        .light_three {
-            top: 30%;
-            left: 11%;
-        }
-
-        .light_four {
-            top: 87%;
-            left: -1%;
-        }
-
-        .light_five {
-            top: 71%;
-            left: 29%;
-        }
-
-        .light_six {
-            top: 57%;
-            left: 100%;
-        }
-        a{
+        a {
             color: white;
         }
-        a:hover{
+
+        a:hover {
             color: rgb(151, 151, 151);
+        }
+
+        /* media--------------- */
+
+        @media(max-height: 842px) {
+            @keyframes slideUp {
+                0% {
+                    top: 100%;
+                    
+                    opacity: 0;
+                    
+                }
+
+                99% {
+                    color: black;
+                    z-index: 2;
+                }
+
+                100% {
+                    top: 65%;
+                    
+                    opacity: 1;
+                   
+                    color: black;
+                    z-index: 2;
+                }
+            }
+        }
+
+        @media(max-height: 772px) {
+            @keyframes slideUp {
+                0% {
+                    top: 100%;
+                    
+                    opacity: 0;
+                   
+                }
+
+                99% {
+                    color: black;
+                    z-index: 2;
+                }
+
+                100% {
+                    top: 68%;
+                    
+                    opacity: 1;
+                    
+                    color: black;
+                    z-index: 2;
+                }
+            }
+        }
+
+        @media(max-height: 699px) {
+            @keyframes slideUp {
+                0% {
+                    top: 100%;
+                    
+                    opacity: 0;
+                    
+                }
+
+                99% {
+                    color: black;
+                    z-index: 2;
+                }
+
+                100% {
+                    top: 70%;
+                    
+                    opacity: 1;
+                    
+                    color: black;
+                    z-index: 2;
+                }
+            }
+
+            #credits {
+                font-size: 22px;
+            }
+        }
+
+        @media(max-height: 613px) {
+            @keyframes slideUp {
+                0% {
+                    top: 100%;
+                    
+                    opacity: 0;
+                    
+                }
+
+                99% {
+                    color: black;
+                    z-index: 2;
+                }
+
+                100% {
+                    top: 61%;
+                    
+                    opacity: 1;
+                    
+                    color: black;
+                    z-index: 2;
+                }
+            }
+
+            #logo,
+            #logotwo {
+                width: 311px;
+            }
+
+            #company {
+                font-size: 43px;
+            }
+
+        }
+
+        @media(max-height: 436px) {
+            @keyframes slideUp {
+                0% {
+                    top: 100%;
+                    
+                    opacity: 0;
+                    
+                }
+
+                99% {
+                    color: black;
+                    z-index: 2;
+                }
+
+                100% {
+                    top: 68%;
+                    
+                    opacity: 1;
+                    
+                    color: black;
+                    z-index: 2;
+                }
+            }
+
+            #credits {
+                font-style: 15px;
+            }
+        }
+
+        @media(max-height: 417px) {
+            @keyframes slideUp {
+                0% {
+                    top: 100%;
+                    
+                    opacity: 0;
+                    
+                }
+
+                99% {
+                    color: black;
+                    z-index: 2;
+                }
+
+                100% {
+                    top: 70%;
+                    
+                    opacity: 1;
+                   
+                    color: black;
+                    z-index: 2;
+                }
+            }
+
+            #credits {
+                font-style: 15px;
+            }
+        }
+
+
+        /* width-------------- */
+        @media(max-width: 853px) {
+            #title {
+                font-size: 38px;
+            }
+        }
+
+        @media(max-width: 736px) {
+            #title {
+                font-size: 30px;
+            }
+        }
+
+        @media(max-width: 585px) {
+            #title {
+                font-size: 24px;
+            }
+        }
+
+        @media(max-width: 535px) {
+
+            #logo,
+            #logotwo {
+                width: 311px;
+            }
+
+            #company {
+                font-size: 43px;
+            }
+
+            #credits {
+                font-size: 23px;
+            }
+
+            @keyframes slideUp {
+                0% {
+                    top: 100%;
+                    
+                    opacity: 0;
+                    
+                }
+
+                99% {
+                    color: black;
+                    z-index: 2;
+                }
+
+                100% {
+                    top: 58%;
+                    
+                    opacity: 1;
+                    
+                    color: black;
+                    z-index: 2;
+                }
+            }
+        }
+
+        @media(max-width: 456px) {
+            #title {
+                font-size: 20px;
+            }
+        }
+
+        @media(max-width: 349px) {
+            #title {
+                font-size: 16px;
+
+            }
+
+            @keyframes slideUp {
+                0% {
+                    top: 100%;
+                   
+                    opacity: 0;
+                
+                }
+
+                99% {
+                    color: black;
+                    z-index: 2;
+                }
+
+                100% {
+                    top: 69%;
+                    
+                    opacity: 1;
+                    
+                    color: black;
+                    z-index: 2;
+                }
+            }
+
+            #credits {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -216,20 +451,17 @@
     <div id="container">
         <img id="logo" src="img/logo2.jpg" alt="Logo">
         <div id="title">Currently Conducting Private Introductions</div>
-        <div id="company">Mutua</div>
+        
         <img src="img/logo2.jpg" alt="logo" id="logotwo">
+        <div id="company">Mutua</div>
 
-        <div class="light light_one"></div>
-        <div class="light light_two"></div>
-        <div class="light light_three"></div>
-        <div class="light light_four"></div>
-        <div class="light light_five"></div>
-        <div class="light light_six"></div>
+
 
     </div>
 
 
-    <div id="credits">For further information, please contact us at <a href="mailto:info@mutua.tv" class="mail"><b>info@mutua.tv</b></a></div>
+    <div id="credits">For further information, please contact us at <a href="mailto:info@mutua.tv"
+            class="mail"><b>info@mutua.tv</b></a></div>
 
     <script>
         window.addEventListener('load', function () {
@@ -262,36 +494,6 @@
                     }, 6000);
                 }, 8000);
             }, 300);
-
-
-            // flashes-------------------------
-
-            function getRandomNumber(min, max) {
-                return Math.random() * (max - min) + min;
-            }
-
-            function flashLights() {
-                const lights = document.querySelectorAll(".light");
-
-                lights.forEach((light) => {
-                    const randomDelay = getRandomNumber(4000, 8000);
-                    const randomDuration = getRandomNumber(4000, 6000);
-
-                    setTimeout(() => {
-                        setInterval(() => {
-                            const randomOpacity = getRandomNumber(0, 1);
-                            light.style.opacity = randomOpacity;
-                        }, 200);
-                    }, randomDelay);
-
-                    setTimeout(() => {
-                        clearInterval(interval);
-                        light.style.opacity = 0;
-                    }, randomDelay + randomDuration);
-                });
-            }
-
-            setTimeout(flashLights, 20000);
 
 
 
